@@ -44,9 +44,9 @@
 
 # Custom multi-agent workflow
    In these architecture, we add individual agents as graph nodes and define the order in which agents are called ahead of time in custom workflow
-   # Explicit Control Flow:
+# Explicit Control Flow:
          Defining control flow of application explicitly via normal graph edges.
-   # Dynamic Control Flow:
+# Dynamic Control Flow:
          A special case of this is supervisor tool-calling architecture.
 
 # Communication and state management
@@ -54,24 +54,24 @@
    # How Agents Communicate?
       Common and generic way for agents to communicate is via a list of messages
 
-   # Handoffs vs Tool Calls
+# Handoffs vs Tool Calls
    ## Payload: 
       1. Agents communicate via handoffs and pass the graph state as part of handoff payload.
       2. Agents pass around list of messages as part of graph state
       3. In case of supervisor with tool calling, the payloads are tool call arguments.
 ![Screenshot 2025-07-07 014054](https://github.com/user-attachments/assets/af3d8aa7-4120-49cd-8160-f222c135ed26)
 
-   # Message passing between Agents
+# Message passing between Agents
       1. Most common way for agents to communicate is via shared state channel(list of messages).
       2. This assumes that there is always atleast single channel in the state that is shared by agents.
       3. One more question arieses, while communicating: Should agents share the full history of their thought process pr only final result.
 ![image](https://github.com/user-attachments/assets/9718daba-9e01-4e2c-864f-ca90c2d8c493)
 
-   ## Sharing full though process
+## Sharing full though process
          1. Agents can share the full history of their thought process (i.e Scratchpad) with all other agnets.
          2. Scratchpad means list of messages.
          3. Sharing full message history would help other agents to make better decisions and improve reasoning abilty of whole system.
-   ## Sharing only final result
+## Sharing only final result
          1. Agents can have their own scratchpad and only share the final result with rest of agents
          2. This works well for complex system, we need to define agents with different state schemas
 
