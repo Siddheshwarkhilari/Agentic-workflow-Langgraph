@@ -59,5 +59,8 @@
       1. Agents communicate via handoffs and pass the graph state as part of handoff payload.
       2. Agents pass around list of messages as part of graph state
       3. In case of supervisor with tool calling, the payloads are tool call arguments.
+![Screenshot 2025-07-07 014054](https://github.com/user-attachments/assets/af3d8aa7-4120-49cd-8160-f222c135ed26)
+
+      
       
 
