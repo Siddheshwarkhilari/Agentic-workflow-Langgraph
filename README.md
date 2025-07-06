@@ -15,7 +15,7 @@
 5] Cutsom multi- agent Workflow - Each agent sommunicates with only subset of agents. Parts of flow are deterministic, only
    some agents can decide which other agents to call.
 
-# Handoffs
+## Handoffs
   In Multi Agent architcture, each agent node executes its task and decide whether to finish execution or route to another agent,
   including routing to itself was well.
   Handoffs is a concept where one agent handoffs control to another agent.
@@ -55,7 +55,7 @@
       Common and generic way for agents to communicate is via a list of messages
 
    # Handoffs vs Tool Calls
-   # Payload: 
+   ## Payload: 
       1. Agents communicate via handoffs and pass the graph state as part of handoff payload.
       2. Agents pass around list of messages as part of graph state
       3. In case of supervisor with tool calling, the payloads are tool call arguments.
