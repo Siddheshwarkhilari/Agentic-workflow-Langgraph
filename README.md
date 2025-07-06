@@ -61,6 +61,20 @@
       3. In case of supervisor with tool calling, the payloads are tool call arguments.
 ![Screenshot 2025-07-07 014054](https://github.com/user-attachments/assets/af3d8aa7-4120-49cd-8160-f222c135ed26)
 
-      
+   # Message passing between Agents
+      1. Most common way for agents to communicate is via shared state channel(list of messages).
+      2. This assumes that there is always atleast single channel in the state that is shared by agents.
+      3. One more question arieses, while communicating: Should agents share the full history of their thought process pr only final result.
+![image](https://github.com/user-attachments/assets/9718daba-9e01-4e2c-864f-ca90c2d8c493)
+
+   ## Sharing full though process
+         1. Agents can share the full history of their thought process (i.e Scratchpad) with all other agnets.
+         2. Scratchpad means list of messages.
+         3. Sharing full message history would help other agents to make better decisions and improve reasoning abilty of whole system.
+   ## Sharing only final result
+         1. Agents can have their own scratchpad and only share the final result with rest of agents
+         2. This works well for complex system, we need to define agents with different state schemas
+
+
       
 
