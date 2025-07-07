@@ -75,6 +75,22 @@
    1. Agents can have their own scratchpad and only share the final result with rest of agents
    2. This works well for complex system, we need to define agents with different state schemas
 
+# Graph API
+Langgraph models agents workflows as a graph and consist of 3 main components.
+   1. State: Shared data structure that shares current snapshot of application, it is python type but is typically a 
+             TypeDict or BaseModel.
+   2. Nodes: Python function that encode the logic of agents. They recieve current state as a input and return updated state as output.
+   3. Edges: Python functions that determine which Node to execute next based on the current State
+## StateGraph
+   This class is main graph class that is parameterized by state object.
+   # StateMessages
+   # Reducers
+
+# Functional API
+This allows us to add features such as persistence, memory, human-in-loop and streaming.
+Uses two main building blocks
+   1. @entrypoint- Marks a function as startinh point of a workflow
+   2. @task- Represents a discrete unit of work i.e API call or data processing that can be executed asynchronously with entrypoint.
 
       
 
